@@ -1,0 +1,18 @@
+{
+  "name": "vanish",
+  "title": "vanish",
+  "description": "Logic and styles to manage smart sliders on web sites",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeremenichelli/vanish"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-concat": "^2.4.1",
+    "gulp-concat-util": "^0.4.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^1.0.1",
+    "gulp-jshint": "^1.8.4",
+    "jshint-stylish": "^1.0.0"
+  }
+}

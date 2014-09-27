@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vanish - Simple and smart slides</title>
+    <style>
+        div[data-vanish-elements] img {
+            display: none;
+            transition: opacity .2 linear;
+        }
+
+        div[data-vanish-elements] img.active {
+            display: block;
+        }
+    </style>
+    <script src="dist/scripts/vanish.js"></script>
+</head>
+<body>
+    <div id="vanish-sample-one" class="vanish">
+        <div data-vanish-elements>
+            <img src="http://placehold.it/350x350&text=one" class="active" alt="1">
+            <img src="http://placehold.it/350x350&text=two" alt="2">
+            <img src="http://placehold.it/350x350&text=three" alt="3">
+        </div>
+    </div>
+    <script>
+        var slide = document.getElementById('vanish-sample-one'),
+            newSlide = new Vanish(slide, { loop: false, next: 'Next', prev: 'Prev' });
+    </script>
+</body>
+</html>
