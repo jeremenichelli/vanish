@@ -234,7 +234,7 @@ if (!Function.prototype.bind) {
                 vanish.nextBtn = document.createElement('a');
                 vanish.prevBtn = document.createElement('a');
 
-                vanish.nextBtn.href = vanish.prevBtn.href = 'javascript:void(0)';
+                vanish.prevBtn.href = vanish.nextBtn.href = '';
 
                 vanish.nextBtn.addClass('vanish-next');
                 vanish.prevBtn.addClass('vanish-prev');
@@ -282,6 +282,8 @@ if (!Function.prototype.bind) {
             }
 
             vanish.setActives();
+
+            return false;
         },
         // move to previous element
         prev : function () {
@@ -300,6 +302,8 @@ if (!Function.prototype.bind) {
             }
 
             vanish.setActives();
+
+            return false;
         },
         activeElement : function (n) {
             var vanish = this;

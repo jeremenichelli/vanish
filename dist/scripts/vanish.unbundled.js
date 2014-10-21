@@ -1,3 +1,6 @@
+// vanish - undefined
+// https://github.com/jeremenichelli/vanish - MIT License
+
 (function (root, factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
