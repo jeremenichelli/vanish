@@ -53,6 +53,33 @@ The same styles should work for indicators and of course this is just **one way 
 
 After you have the markup and styles set up you'll have to include a ```vanish.js``` file inside your project. It uses polyfills for requestAnimationFrame, Function.prototype.bind and a small class manager so there's a standard version that includes this three dependencies and an unbundled one with just the specific slide management logic.
 
+For every slide you have placed on your site call the following method:
+
+```js
+var mySlideElement = document.getElementById('mySlide');
+
+var mySlide = new Vanish(mySlideElement, {
+   loop: false,
+   next: 'Next',
+   prev: 'Previous' 
+});
+```
+
+When everything is set a *vanish-started* class will be added to the element in case ou want to apply styles. If the scripts finds out that the slides only contains one element it will not loop or show navigation buttons.
+
+### Options
+
+By default Vanish slides will loop every 300 frames *where each frame is 16ms approximately* and will have navigation arrows you can change all of this sending an object with the following options:
+
+```js
+{
+    loop: BOOLEAN, // if false slide won't loop
+    lapse: NUMBER, // number of frames of loop duration
+    navigation: BOOLEAN, // if false navigation buttons won't be added
+    prev: STRING, // prev navigation button text
+    next: STRING // next navigation button text
+}
+```
 
 ## Contributing
 
